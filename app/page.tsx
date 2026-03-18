@@ -95,7 +95,7 @@ export default async function Home() {
                 <Link
                   key={state.stateSlug}
                   href={`/${state.stateSlug}`}
-                  className="rounded-xl border-2 border-gold bg-navy px-5 py-4 text-left text-white transition hover:bg-navy-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+                  className="rounded-xl border-2 border-gold bg-surface px-5 py-4 text-left text-navy transition hover:bg-surface-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                 >
                   <p className="text-lg font-semibold">{state.stateName}</p>
                   <p className="mt-1 text-sm text-gold-soft">
@@ -126,7 +126,7 @@ export default async function Home() {
             <Link
               key={item.provinceSlug}
               href={`/canada/${item.provinceSlug}`}
-              className="rounded-xl border-2 border-gold bg-navy px-5 py-4 text-left text-white transition hover:bg-navy-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+              className="rounded-xl border-2 border-gold bg-surface px-5 py-4 text-left text-navy transition hover:bg-surface-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <p className="text-lg font-semibold">{item.provinceName}</p>
               <p className="mt-1 text-sm text-gold-soft">
@@ -216,7 +216,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="bg-navy/5">
+      <section className="bg-background">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold text-navy border-b-2 border-teal/50 pb-2 inline-block">
             How It Works
@@ -262,7 +262,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="bg-navy/5 border-y border-navy/10">
+      <section className="bg-background border-y border-navy/10">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold text-navy border-b-2 border-teal/50 pb-2 inline-block">
             Why Trust Us
@@ -298,13 +298,13 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="bg-navy">
+      <section className="bg-background">
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-gold/50 bg-navy-soft/60 p-6 text-surface ring-1 ring-gold/30">
+          <div className="rounded-2xl border border-gold/50 bg-surface-muted p-6 text-foreground ring-1 ring-gold/30">
             <h2 className="text-2xl font-semibold text-gold-soft">
               Are You an Auto Repair Shop Owner?
             </h2>
-            <p className="mt-3 max-w-3xl text-sm text-surface/90">
+            <p className="mt-3 max-w-3xl text-sm text-foreground/90">
               Get your shop seen by drivers actively searching for auto repair
               options in your city. Featured listings available.
             </p>

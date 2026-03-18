@@ -196,21 +196,21 @@ export default async function ProvincePage({ params }: ProvincePageProps) {
       >
         Get your shop featured — view pricing &amp; benefits →
       </Link>
-      <section className="rounded-2xl bg-navy px-5 py-6 text-surface shadow-lg shadow-navy/30 ring-1 ring-gold/40 sm:px-8 sm:py-8">
+      <section className="rounded-2xl bg-surface-muted px-5 py-6 text-foreground shadow-lg shadow-navy/10 ring-1 ring-gold/40 sm:px-8 sm:py-8">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-soft">
           Province overview
         </p>
         <h1 className="mt-2 text-3xl font-semibold sm:text-4xl">
           Auto Repair Shops in {provinceName}, Canada
         </h1>
-        <p className="mt-3 max-w-2xl text-sm text-surface/80">
+        <p className="mt-3 max-w-2xl text-sm text-foreground/80">
           Explore {careTypesText} across {provinceName}, including major city
           areas such as {majorCitiesText}. Use this page to compare options by
           city.
         </p>
 
         <div className="mt-5 grid gap-4 text-sm sm:grid-cols-3">
-          <div className="rounded-xl bg-navy-soft/70 p-4 ring-1 ring-white/5">
+          <div className="rounded-xl bg-surface p-4 ring-1 ring-navy/10">
             <p className="text-xs font-semibold uppercase tracking-wide text-gold-soft">
               Shops listed
             </p>
@@ -218,13 +218,13 @@ export default async function ProvincePage({ params }: ProvincePageProps) {
               {totalFacilities.toLocaleString()}
             </p>
           </div>
-          <div className="rounded-xl bg-navy-soft/70 p-4 ring-1 ring-white/5">
+          <div className="rounded-xl bg-surface p-4 ring-1 ring-navy/10">
             <p className="text-xs font-semibold uppercase tracking-wide text-gold-soft">
               Cities covered
             </p>
             <p className="mt-1 text-2xl font-semibold">{cities.length}</p>
           </div>
-          <div className="rounded-xl bg-navy-soft/70 p-4 ring-1 ring-white/5">
+          <div className="rounded-xl bg-surface p-4 ring-1 ring-navy/10">
             <p className="text-xs font-semibold uppercase tracking-wide text-gold-soft">
               Average rating
             </p>
@@ -263,7 +263,7 @@ export default async function ProvincePage({ params }: ProvincePageProps) {
         );
       })()}
 
-      <section className="mt-8 rounded-2xl border-2 border-navy/20 bg-navy/5 p-6 space-y-4">
+      <section className="mt-8 rounded-2xl border-2 border-navy/20 bg-background p-6 space-y-4">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-navy border-b-2 border-teal/50 pb-1 inline-block">
@@ -293,11 +293,11 @@ export default async function ProvincePage({ params }: ProvincePageProps) {
               <Link
                 key={city.citySlug}
                 href={`/canada/${resolvedProvinceSlug}/${city.citySlug}`}
-                className="group flex items-center justify-between rounded-lg border border-surface-muted border-l-[3px] border-l-navy bg-surface px-3 py-2 text-sm text-navy shadow-sm transition hover:border-teal hover:bg-navy hover:text-white"
+                className="group flex items-center justify-between rounded-lg border border-surface-muted border-l-[3px] border-l-navy bg-surface px-3 py-2 text-sm text-navy shadow-sm transition hover:border-teal hover:bg-surface-muted hover:text-navy"
               >
                 <div className="flex flex-col">
                   <span className="font-medium">{city.cityName}</span>
-                  <span className="text-xs text-slate-600 group-hover:text-white/85">
+                  <span className="text-xs text-slate-600 group-hover:text-navy/85">
                     {city.facilityCount.toLocaleString()}{" "}
                     {city.facilityCount === 1 ? "shop" : "shops"}
                   </span>

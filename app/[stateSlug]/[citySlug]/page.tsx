@@ -259,7 +259,7 @@ export default async function CityPage({ params }: CityPageProps) {
               <Link
                 key={city.citySlug}
                 href={`/${stateSlugNorm}/${city.citySlug}`}
-                className="rounded-lg border border-surface-muted border-l-[3px] border-l-navy bg-surface px-3 py-2 text-sm text-navy shadow-sm transition hover:border-teal hover:bg-navy hover:text-white"
+                className="rounded-lg border border-surface-muted border-l-[3px] border-l-navy bg-surface px-3 py-2 text-sm text-navy shadow-sm transition hover:border-teal hover:bg-surface-muted hover:text-navy"
               >
                 <p className="font-medium">{city.cityName}</p>
                 <p className="text-xs text-slate-600">

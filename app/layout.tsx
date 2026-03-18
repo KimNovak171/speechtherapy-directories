@@ -93,7 +93,7 @@ export default async function RootLayout({
                   </Link>
                   <Link
                     href="/advertise"
-                    className="inline-flex items-center rounded-full bg-[#059669] px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-[#047857] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#34d399] focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+                    className="inline-flex items-center rounded-full bg-teal px-4 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-teal-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                   >
                     Advertise
                   </Link>
@@ -108,14 +108,14 @@ export default async function RootLayout({
           <main className="flex-1">{children}</main>
 
           <section
-            className="w-full border-t-[3px] border-gold bg-navy px-4 py-5 text-white/80 sm:px-6 lg:px-8"
+            className="w-full border-t-[3px] border-gold bg-background px-4 py-5 text-foreground/80 sm:px-6 lg:px-8"
             aria-label="Full state and city directory"
           >
             <div className="mx-auto flex max-w-6xl flex-col gap-4">
               <h2 className="text-sm font-semibold text-gold-soft">
                 Full State and City Directory
               </h2>
-              <p className="text-[11px] text-white/70">
+              <p className="text-[11px] text-foreground/70">
                 Crawlable internal links to every state and city page.
               </p>
               <div className="flex flex-col gap-5">
@@ -132,7 +132,7 @@ export default async function RootLayout({
                         <Link
                           key={`${state.stateSlug}-${city.citySlug}`}
                           href={`/${state.stateSlug}/${city.citySlug}`}
-                          className="text-[11px] text-white/85 hover:text-gold"
+                          className="text-[11px] text-foreground/85 hover:text-gold"
                         >
                           {city.cityName}
                         </Link>
@@ -142,7 +142,7 @@ export default async function RootLayout({
                 ))}
                 {canadaDirectory.length > 0 && (
                   <>
-                    <div className="space-y-2 border-t border-white/15 pt-5">
+                    <div className="space-y-2 border-t border-navy/10 pt-5">
                       <Link
                         href="/canada"
                         className="text-sm font-semibold text-gold-soft hover:text-gold"
@@ -163,7 +163,7 @@ export default async function RootLayout({
                             <Link
                               key={`${province.provinceSlug}-${city.citySlug}`}
                               href={`/canada/${province.provinceSlug}/${city.citySlug}`}
-                              className="text-[11px] text-white/85 hover:text-gold"
+                              className="text-[11px] text-foreground/85 hover:text-gold"
                             >
                               {city.cityName}
                             </Link>
@@ -177,8 +177,8 @@ export default async function RootLayout({
             </div>
           </section>
 
-          <footer className="w-full border-t border-white/15 bg-navy">
-            <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-5 text-xs text-white/80 sm:px-6 lg:px-8">
+          <footer className="w-full border-t border-navy/10 bg-background">
+            <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-5 text-xs text-foreground/80 sm:px-6 lg:px-8">
               <p>
                 © {new Date().getFullYear()} AutoRepairDirectories.com. For
                 informational purposes only – always verify licensing,

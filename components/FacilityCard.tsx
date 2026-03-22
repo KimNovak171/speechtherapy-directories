@@ -159,22 +159,19 @@ export function FacilityCard({ facility }: FacilityCardProps) {
       ...(city && { addressLocality: city }),
       ...(state && { addressRegion: state }),
     },
-    ...(rating &&
-      typeof rating === "number" &&
-      !Number.isNaN(rating) && {
+    ...(typeof rating === "number" &&
+      !Number.isNaN(rating) &&
+      rating > 0 &&
+      typeof reviewCount === "number" &&
+      !Number.isNaN(reviewCount) &&
+      reviewCount > 0 && {
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: rating,
           bestRating: 5,
           worstRating: 0,
-          ratingCount:
-            typeof reviewCount === "number" && reviewCount >= 0
-              ? reviewCount
-              : 0,
-          reviewCount:
-            typeof reviewCount === "number" && reviewCount >= 0
-              ? reviewCount
-              : 0,
+          ratingCount: reviewCount,
+          reviewCount: reviewCount,
         },
       }),
     ...(id && { identifier: id }),

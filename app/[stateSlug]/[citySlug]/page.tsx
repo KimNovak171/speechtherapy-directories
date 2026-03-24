@@ -8,7 +8,7 @@ import {
   getOtherCitiesInState,
 } from "@/lib/stateFacilities";
 
-const siteUrl = "https://occupationaltherapydirectories.com";
+const siteUrl = "https://speechtherapydirectories.com";
 
 type CityPageProps = {
   params: Promise<{ stateSlug: string; citySlug: string }>;
@@ -27,8 +27,8 @@ export async function generateMetadata({
   const { stateName, cityName, facilities: cityFacilities } =
     await getCityFacilities(safeState, safeCity);
   const count = Array.isArray(cityFacilities) ? cityFacilities.length : 0;
-  const title = `Occupational Therapy Practices in ${cityName}, ${stateName} | Occupational Therapy Directories`;
-  const description = `Find ${count.toLocaleString()} occupational therapy practices in ${cityName}, ${stateName}. Compare services and practice details. Verified listings with ratings and reviews.`;
+  const title = `Speech Therapy Practices in ${cityName}, ${stateName} | Speech Therapy Directories`;
+  const description = `Find ${count.toLocaleString()} speech therapy practices in ${cityName}, ${stateName}. Compare services and practice details. Verified listings with ratings and reviews.`;
 
   return {
     title,
@@ -43,14 +43,14 @@ export async function generateMetadata({
       title,
       description,
       url: canonicalPath,
-      siteName: "OccupationalTherapyDirectories.com",
+      siteName: "SpeechTherapyDirectories.com",
       type: "website",
       images: [
         {
           url: "/og-image.svg",
           width: 1200,
           height: 630,
-          alt: `${cityName}, ${stateName} occupational therapy practice directory preview`,
+          alt: `${cityName}, ${stateName} speech therapy practice directory preview`,
         },
       ],
     },
@@ -101,7 +101,7 @@ export default async function CityPage({ params }: CityPageProps) {
   const careTypesText =
     careTypes.length > 0
       ? careTypes.slice(0, 4).join(", ")
-      : "occupational therapy services";
+      : "speech therapy services";
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -110,7 +110,7 @@ export default async function CityPage({ params }: CityPageProps) {
       {
         "@type": "ListItem",
         position: 1,
-        name: "OccupationalTherapyDirectories.com",
+        name: "SpeechTherapyDirectories.com",
         item: `${siteUrl}/`,
       },
       {
@@ -131,21 +131,21 @@ export default async function CityPage({ params }: CityPageProps) {
   const webpageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: `Occupational Therapy Practices in ${cityName}, ${stateName}`,
+    name: `Speech Therapy Practices in ${cityName}, ${stateName}`,
     url: `${siteUrl}/${stateSlugNorm}/${citySlugNorm}`,
     isPartOf: {
       "@type": "WebSite",
-      name: "OccupationalTherapyDirectories.com",
+      name: "SpeechTherapyDirectories.com",
       url: `${siteUrl}/`,
     },
     about: [
       {
         "@type": "Thing",
-        name: `${cityName} occupational therapy practices`,
+        name: `${cityName} speech therapy practices`,
       },
       {
         "@type": "Thing",
-        name: `${stateName} occupational therapy services`,
+        name: `${stateName} speech therapy services`,
       },
       {
         "@type": "Thing",
@@ -182,14 +182,14 @@ export default async function CityPage({ params }: CityPageProps) {
       />
       <header className="space-y-4">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
-          Occupational therapy by city
+          Speech therapy by city
         </p>
         <h1 className="text-3xl font-semibold text-navy">
-          Occupational Therapy Practices in {cityName}, {stateName}
+          Speech Therapy Practices in {cityName}, {stateName}
         </h1>
         <p className="max-w-2xl text-sm text-slate-600">
           {cityName} has {facilities.length.toLocaleString()} verified
-          occupational therapy practices including {careTypesText}. Browse all options
+          speech therapy practices including {careTypesText}. Browse all options
           below, each with Google Maps profile links and ratings data where
           available.
         </p>

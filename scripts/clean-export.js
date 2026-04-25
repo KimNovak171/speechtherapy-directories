@@ -10,6 +10,11 @@ function deleteTxtFiles(dir) {
     if (entry.isDirectory()) {
       deleteTxtFiles(fullPath);
     } else if (entry.isFile()) {
+      const fileName = entry.name.toLowerCase();
+      if (fileName === "robots.txt") {
+        continue;
+      }
+
       if (path.extname(entry.name).toLowerCase() === ".txt") {
         fs.unlinkSync(fullPath);
       }
